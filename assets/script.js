@@ -1,17 +1,23 @@
 // date format
 $(window).on("load", function (e) {
-var date = dayjs().format('MM/DD/YYYY');
-// date in the header
-var topDate = $('#currentDay');
-// displays date in header
-topDate.text(date);
+  var date = dayjs().format("dddd, MM/DD/YYYY");
+  // date in the header
+  var topDate = $("#currentDay");
+  // displays date in header
+  topDate.text(date);
+  // displays current time
+  var now = dayjs().format("h:mm A");
+  var currentTime = $("#currentTime");
+  currentTime.text(now);
+  // time comparison to check for past, present, future
+  function checkTime() {}
 
-// save button
-$('.saveBtn').on('click', function (event) {
-  console.log("save button clicked");
-  console.log($(this).siblings('.description').val());
-  
-});
+  // save button
+  $(".saveBtn").on("click", function (event) {
+    var timeBlockValue = $(event.target).siblings(".description").val();
+    var timeBlockTime = $(event.target).parent().data("time");
+    console.log(timeBlockTime, timeBlockValue);
+  });
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -29,7 +35,4 @@ $('.saveBtn').on('click', function (event) {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  
-
-
 });
