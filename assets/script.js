@@ -1,9 +1,18 @@
+// date format
 $(window).on("load", function (e) {
-var date = dayjs().format('MM/DD/YYYY h');
-console.log(date);
+var date = dayjs().format('MM/DD/YYYY');
+// date in the header
 var topDate = $('#currentDay');
-console.log(topDate);
+// displays date in header
 topDate.text(date);
+
+// save button
+$('.saveBtn').on('click', function (event) {
+  console.log("save button clicked");
+  console.log($(this).siblings('.description').val());
+  
+});
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -20,8 +29,7 @@ topDate.text(date);
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+  
 
 
 });
