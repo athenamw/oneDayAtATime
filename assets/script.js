@@ -12,6 +12,9 @@ $(function () {
     var description = $(this).siblings(".description").val();
     var timeBlock = $(this).parent().attr("data-time");
     console.log(description, timeBlock);
+    var workdayData = JSON.parse(localStorage.getItem("workdayData")) || {};
+    workdayData[timeBlock] = description;
+    localStorage.setItem("workdayData", JSON.stringify(workdayData));
   });
 
   // TODO: Add code to apply the past, present, or future class to each time
