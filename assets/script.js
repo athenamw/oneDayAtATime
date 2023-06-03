@@ -40,6 +40,16 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+  var workdayDataFromLocalStorage =
+    JSON.parse(localStorage.getItem("workdayData")) || {};
+  $.each(workdayDataFromLocalStorage, function (hour, description) {
+    $(".time-block").each(function () {
+      var compareDataTime = $(this).attr("data-time");
+      if (compareDataTime == hour) {
+        $(this).children(".description").text(description);
+      }
+    });
+  });
 
   // TODO: Add code to display the current date in the header of the page.
   var date = dayjs().format("dddd, MM / DD / YYYY");
