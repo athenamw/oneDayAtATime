@@ -22,16 +22,16 @@ N/A
 
 ## Deployed Site and Repository Links
 
-[Deployed site]()
+[Deployed site](https://athenamw.github.io/oneDayAtATime/)
 
-[Repository]()
+[Repository](https://github.com/athenamw/oneDayAtATime)
 
-[Javascript]()
+[Javascript](https://github.com/athenamw/oneDayAtATime/blob/main/assets/script.js)
 
-[HTML]()
+[HTML](https://github.com/athenamw/oneDayAtATime/blob/main/index.html)
 
-[CSS]()
+[CSS](https://github.com/athenamw/oneDayAtATime/blob/main/assets/style.css)
 
 ## Screenshot
 
-[Calendar]()
+[Calendar](./assets/workCalendarScreenshot.png)
